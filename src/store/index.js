@@ -9,9 +9,9 @@ const initialState = {};
 const middlewares = [thunk];
 
 const store = createStore(
-    rootReducer,
-    initialState,
-    applyMiddleware(...middlewares)
+  rootReducer,
+  initialState,
+  applyMiddleware(...middlewares),
 );
 
 export default store;
