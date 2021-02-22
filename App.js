@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {SafeAreaView, StyleSheet} from 'react-native';
@@ -15,18 +15,9 @@ import AddTransaction from './src/Components/AddTransaction';
 
 const Stack = createStackNavigator();
 
-const CODE_PUSH_OPTIONS = {
-  checkFrequency = CodePush.CheckFrequency.ON_APP_START,
-};
-
 const App = () => {
-
-  const syncStatus = (status) => {
-    console.log(status);
-  }
-
   useEffect(() => {
-    CodePush.sync({installMode: CodePush.InstallMode.IMMEDIATE}, syncStatus, null);
+    CodePush.sync({installMode: CodePush.InstallMode.IMMEDIATE});
   }, []);
 
   return (
@@ -60,5 +51,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+const CODE_PUSH_OPTIONS = {
+  checkFrequency: CodePush.CheckFrequency.ON_APP_START,
+  installMode: CodePush.InstallMode.IMMEDIATE,
+};
 
 export default CodePush(CODE_PUSH_OPTIONS)(App);
