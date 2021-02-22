@@ -18,7 +18,7 @@ const Item = ({title, id, price}) => {
     <View
       style={{
         marginVertical: 3,
-        paddingHorizontal: 30,
+        paddingHorizontal: 15,
         paddingVertical: 15,
       }}>
       <ListItem>
@@ -67,7 +67,7 @@ const HomeScreen = ({navigation}) => {
         <Card navigation={navigation} />
       </Animated.View>
 
-      <View style={{flex: 1, marginTop: -150}}>
+      <View style={{flex: 1, marginTop: -200}}>
         {transactions.length > 0 ? (
           <FlatList
             data={transactions}
