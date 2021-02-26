@@ -29,21 +29,21 @@ function Card({navigation}) {
           alignItems: 'flex-end',
           width: '30%',
         }}>
-        <Text
-          style={{
-            fontSize: 18,
-            color: '#fff',
-            fontWeight: '700',
-          }}>
-          Rupee
-        </Text>
         <View style={{flex: 1}}>
+          <Text
+            style={{
+              fontSize: 20,
+              color: '#fff',
+              fontWeight: '700',
+            }}>
+            Rupee
+          </Text>
           <Button
             rounded
             light
             style={{
-              padding: 10,
-              marginTop: 32,
+              padding: 15,
+              marginTop: 20,
               borderWidth: 3,
               borderColor: '#fff',
               backgroundColor: '#E10C62',
@@ -68,13 +68,14 @@ function Card({navigation}) {
               color: '#fff',
               fontSize: 17,
               fontWeight: '700',
+              right: 0,
             }}>
             Debit
           </Text>
           <Text
             style={{
               color: '#fff',
-              fontSize: 18,
+              fontSize: 15,
               fontWeight: '700',
             }}>
             ₹{expense}
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 15,
     flexDirection: 'row',
-    padding: 20,
+    padding: 15,
   },
   balance: {
     width: '70%',
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
   },
   balanceValue: {
     fontFamily: 'Lato-Medium',
-    fontSize: 32,
+    fontSize: 22,
     color: '#fff',
     fontWeight: '700',
   },

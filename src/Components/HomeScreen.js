@@ -17,9 +17,8 @@ const Item = ({title, id, price}) => {
   return (
     <View
       style={{
-        marginVertical: 3,
-        paddingHorizontal: 15,
-        paddingVertical: 15,
+        marginVertical: 5,
+        paddingVertical: 10,
       }}>
       <ListItem>
         <CheckBox
@@ -31,7 +30,7 @@ const Item = ({title, id, price}) => {
         />
 
         <Body>
-          <Text style={{fontSize: 17, fontWeight: '700', marginLeft: 10}}>
+          <Text style={{fontSize: 15, fontWeight: '700', marginLeft: 10}}>
             {title}
           </Text>
         </Body>
@@ -39,8 +38,8 @@ const Item = ({title, id, price}) => {
         <Right>
           <Text
             style={{
-              fontFamily: 'Lato Bold',
-              fontSize: 14,
+              fontFamily: 'Lato Regular',
+              fontSize: 12,
               fontWeight: '400',
               color: price > 0 ? '#009BFC' : '#FF4500',
             }}>
@@ -61,13 +60,13 @@ const HomeScreen = ({navigation}) => {
         style={{
           flex: 1,
           alignItems: 'center',
-          paddingHorizontal: 20,
-          paddingVertical: 10,
+          paddingHorizontal: 15,
+          paddingVertical: 15,
         }}>
         <Card navigation={navigation} />
       </Animated.View>
 
-      <View style={{flex: 1, marginTop: -200}}>
+      <View style={{flex: 1, marginTop: -180}}>
         {transactions.length > 0 ? (
           <FlatList
             data={transactions}
