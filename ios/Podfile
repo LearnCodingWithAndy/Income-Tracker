@@ -8,6 +8,14 @@ target 'income_app' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+  pod 'appcenter-analytics', :path => '../node_modules/appcenter-analytics'
+
+  pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes'
+
   target 'income_appTests' do
     inherit! :complete
     # Pods for testing
