@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">income_app</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">78dH8AM4n5H3eIcLYhp3yZ28rKd3ZsOrnmrLQ</string>
 </resources>
