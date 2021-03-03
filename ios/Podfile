@@ -16,6 +16,8 @@ target 'income_app' do
 
   pod 'appcenter-crashes', :path => '../node_modules/appcenter-crashes'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
   target 'income_appTests' do
     inherit! :complete
     # Pods for testing
