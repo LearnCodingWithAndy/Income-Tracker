@@ -53,7 +53,6 @@ const Item = ({title, id, price}) => {
 
 const HomeScreen = ({navigation}) => {
   const {transactions} = useSelector((state) => state.transactions);
-
   return (
     <Container>
       <Animated.View
